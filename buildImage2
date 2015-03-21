@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build -t httpie:python2 -f Dockerfile-python2 .

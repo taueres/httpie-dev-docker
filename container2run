@@ -1,0 +1,3 @@
+#!/bin/sh
+WORKING_PATH=`pwd -P`
+docker run -ti -v $WORKING_PATH/httpie:/root/httpie httpie:python2 $@

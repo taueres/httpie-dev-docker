@@ -1,0 +1,12 @@
+FROM ubuntu:14.04
+MAINTAINER Sergio Santoro
+
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y python3 python3-pip
+RUN ln -s $(which python3) /bin/python
+RUN ln -s $(which pip3) /bin/pip
+
+COPY httpie /root/httpie
+RUN cd /root/httpie && make
+
+RUN rm -rf /root/httpie/*

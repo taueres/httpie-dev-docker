@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build -t httpie:python3 -f Dockerfile-python3 .
